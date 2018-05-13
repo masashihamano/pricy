@@ -31,9 +31,9 @@ gem 'bcrypt', '~> 3.1.11'
 # gem 'mini_magick', '~> 4.8'
 
 # bootstrap利用時に追加
-gem 'bootstrap-sass'
-gem 'jquery-rails'
-gem 'jquery-turbolinks'
+# gem 'bootstrap-sass'
+# gem 'jquery-rails'
+# gem 'jquery-turbolinks'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
@@ -45,7 +45,7 @@ gem 'bulma-rails', '~> 0.6.1'
 # bootstrapで管理画面を作るのに必要
 gem 'simple_form'
 #認証機能(login,logout)が簡単にできる
-gem 'devise'
+gem 'devise', '~> 4.4'
 # 画像の設定ができる
 gem 'gravatar_image_tag'
 # ファイルアップロード機能
@@ -59,10 +59,10 @@ gem "font-awesome-rails"
 
 
 group :development, :test do
-  gem 'pry-rails'
-  gem 'pry-doc'
-  gem 'pry-byebug'
-  gem 'pry-stack_explorer'
+  # gem 'pry-rails'
+  # gem 'pry-doc'
+  # gem 'pry-byebug'
+  # gem 'pry-stack_explorer'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 # エラー画面をわかりやすく整形してくれる

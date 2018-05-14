@@ -4,11 +4,11 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '2.5.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails'
+gem 'rails', '~> 5.2.0'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 # Use Puma as the app server
-gem 'puma', '~> 3.11'
+gem 'puma', '~> 3.7'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -26,14 +26,10 @@ gem 'jbuilder', '~> 2.5'
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
-gem 'bcrypt', '~> 3.1.11'
+
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 
-# bootstrap利用時に追加
-# gem 'bootstrap-sass'
-# gem 'jquery-rails'
-# gem 'jquery-turbolinks'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
@@ -47,15 +43,19 @@ gem 'simple_form'
 #認証機能(login,logout)が簡単にできる
 gem 'devise', '~> 4.4'
 # 画像の設定ができる
-gem 'gravatar_image_tag'
+gem 'gravatar_image_tag', '~> 1.2'
 # ファイルアップロード機能
 gem 'carrierwave'
 # 画像処理(リサイズなど)に使う
 gem 'mini_magick'
 # ajaxイベント発生時の共通処理
-gem 'responders'
+# gem 'responders'
 # フォントオーサム
-gem "font-awesome-rails"
+# gem "font-awesome-rails"
+# bootstrap利用時に追加
+gem 'bootstrap-sass'
+gem 'jquery-rails'
+gem 'jquery-turbolinks'
 
 
 group :development, :test do
@@ -66,11 +66,11 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 # エラー画面をわかりやすく整形してくれる
-  gem 'better_errors'
+  gem 'better_errors', '~> 2.4'
 # ファイルの変更を自動で処理を実行
-  gem 'guard'
+  gem 'guard', '~> 2.14', '>= 2.14.1'
 # Viewファイルの変更したときに自動的にブラウザをリロードする
-  gem 'guard-livereload'
+  gem 'guard-livereload', '~> 2.5', '>= 2.5.2'
 
 
 end
@@ -86,7 +86,7 @@ end
 
 group :test do
   # Adds support for Capybara system testing and selenium driver
-  gem 'capybara', '>= 2.15', '< 4.0'
+  gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
   # Easy installation and use of chromedriver to run system tests with Chrome
   gem 'chromedriver-helper'
